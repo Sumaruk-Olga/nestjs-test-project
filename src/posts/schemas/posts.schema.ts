@@ -8,7 +8,7 @@ export class Posts {
   id: string;
 
   @Prop()
-  createBy: string;
+  createBy: string; //  @Prop({ type: MongooseSchema.Types.ObjectId, ref: 'User', required: true }) createdBy: User;
 
   @Prop()
   post: string;
