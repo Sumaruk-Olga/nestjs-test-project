@@ -6,6 +6,7 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import * as mongoose from 'mongoose';
 import { Posts } from './schemas/posts.schema';
+import { User } from 'src/auth/schemas/user.schema';
 
 @Injectable()
 export class PostsService {
@@ -19,8 +20,9 @@ export class PostsService {
     return posts;
   }
 
-  async create(post: Posts): Promise<Posts> {
-    const res = await this.postsModel.create(post);
+  async create(post: Posts, user: User): Promise<Posts> {
+    const data = Object.assign(post, { user: user._id });
+    const res = await this.postsModel.create(data);
     return res;
   }
 

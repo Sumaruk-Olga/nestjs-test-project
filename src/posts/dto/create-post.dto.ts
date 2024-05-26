@@ -1,9 +1,11 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsEmpty, IsNotEmpty, IsString } from 'class-validator';
+import { User } from 'src/auth/schemas/user.schema';
 
 export class CreatePostDto {
   id: string;
 
-  createBy: string;
+  @IsEmpty()
+  createBy: User;
 
   @IsNotEmpty()
   @IsString()

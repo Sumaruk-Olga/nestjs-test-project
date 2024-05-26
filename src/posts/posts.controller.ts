@@ -6,11 +6,14 @@ import {
   Param,
   Post,
   Put,
+  Req,
+  UseGuards,
 } from '@nestjs/common';
 import { PostsService } from './posts.service';
 import { Posts } from './schemas/posts.schema';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('posts')
 export class PostsController {
@@ -22,11 +25,14 @@ export class PostsController {
   }
 
   @Post()
+  @UseGuards(AuthGuard())
   async createPost(
     @Body()
     post: CreatePostDto,
+    @Req()
+    req,
   ): Promise<Posts> {
-    return this.postsService.create(post);
+    return this.postsService.create(post, req.user);
   }
 
   @Get(':id')
