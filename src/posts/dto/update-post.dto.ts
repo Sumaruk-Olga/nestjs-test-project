@@ -5,7 +5,7 @@ export class UpdatePostDto {
   id: string;
 
   @IsEmpty()
-  createBy: User;
+  createdBy: User;
 
   @IsOptional()
   @IsString()

@@ -5,7 +5,7 @@ export class CreatePostDto {
   id: string;
 
   @IsEmpty()
-  createBy: User;
+  createdBy: User;
 
   @IsNotEmpty()
   @IsString()

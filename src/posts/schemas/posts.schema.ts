@@ -10,7 +10,7 @@ export class Posts {
   id: string;
 
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true })
-  createBy: User;
+  createdBy: User;
 
   @Prop({ required: true, minlength: 3, maxlength: 250 })
   post: string;

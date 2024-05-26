@@ -21,7 +21,7 @@ export class PostsService {
   }
 
   async create(post: Posts, user: User): Promise<Posts> {
-    const data = Object.assign(post, { user: user._id });
+    const data = Object.assign(post, { createdBy: user._id });
     const res = await this.postsModel.create(data);
     return res;
   }
