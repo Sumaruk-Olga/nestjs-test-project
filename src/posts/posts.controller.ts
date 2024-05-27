@@ -20,6 +20,7 @@ export class PostsController {
   constructor(private postsService: PostsService) {}
 
   @Get()
+  @UseGuards(AuthGuard())
   async getAllPosts(): Promise<Posts[]> {
     return this.postsService.findAll();
   }
@@ -36,6 +37,7 @@ export class PostsController {
   }
 
   @Get(':id')
+  @UseGuards(AuthGuard())
   async getPost(
     @Param('id')
     id: string,
@@ -44,6 +46,7 @@ export class PostsController {
   }
 
   @Put(':id')
+  @UseGuards(AuthGuard())
   async updatePost(
     @Param('id')
     id: string,
@@ -54,6 +57,7 @@ export class PostsController {
   }
 
   @Delete(':id')
+  @UseGuards(AuthGuard())
   async deletePost(
     @Param('id')
     id: string,
