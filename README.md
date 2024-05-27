@@ -54,7 +54,8 @@ Body
   "name": "John Doe",
   "email": "johndoe@example.com",
   "password": "yourpassword"
-}```
+}
+```
 
 Login
 
@@ -63,7 +64,8 @@ Body
 {
   "email": "johndoe@example.com",
   "password": "yourpassword"
-}```
+}
+```
 
 
 User Endpoints
@@ -72,13 +74,15 @@ Get User
 
 ```GET /users/:id
 Headers:
-Authorization: Bearer <JWT_TOKEN>```
+Authorization: Bearer <JWT_TOKEN>
+```
 
 Get All Users
 
 ```GET /users
 Headers:
-Authorization: Bearer <JWT_TOKEN>```
+Authorization: Bearer <JWT_TOKEN>
+```
 
 
 Post Endpoints
@@ -91,13 +95,15 @@ Authorization: Bearer <JWT_TOKEN>
 Body
 {
   "post": "This is a new post"
-}```
+}
+```
 
 Get All Posts
 
 ```GET /posts
 Headers:
-Authorization: Bearer <JWT_TOKEN>```
+Authorization: Bearer <JWT_TOKEN>
+```
 
 Update Post
 
@@ -107,10 +113,12 @@ Authorization: Bearer <JWT_TOKEN>
 Body
 {
   "post": "This is a new post"
-}```
+}
+```
 
 Remove Post
 
 ```DELETE //posts/:id
 Headers:
-Authorization: Bearer <JWT_TOKEN>```
+Authorization: Bearer <JWT_TOKEN>
+```
