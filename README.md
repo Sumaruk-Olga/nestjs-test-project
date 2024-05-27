@@ -48,7 +48,9 @@ Auth Endpoints
 
 Register
 
-```POST /auth/signup
+POST /auth/signup
+
+```
 Body
 {
   "name": "John Doe",
@@ -59,7 +61,9 @@ Body
 
 Login
 
-```POST /auth/login
+POST /auth/login
+
+```
 Body
 {
   "email": "johndoe@example.com",
@@ -72,14 +76,18 @@ User Endpoints
 
 Get User
 
-```GET /users/:id
+GET /users/:id
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 ```
 
 Get All Users
 
-```GET /users
+GET /users
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 ```
@@ -89,7 +97,9 @@ Post Endpoints
 
 Create Post
 
-```POST /posts
+POST /posts
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 Body
@@ -100,14 +110,18 @@ Body
 
 Get All Posts
 
-```GET /posts
+GET /posts
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 ```
 
 Update Post
 
-```PUT /posts/:id
+PUT /posts/:id
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 Body
@@ -118,7 +132,9 @@ Body
 
 Remove Post
 
-```DELETE //posts/:id
+DELETE //posts/:id
+
+```
 Headers:
 Authorization: Bearer <JWT_TOKEN>
 ```
